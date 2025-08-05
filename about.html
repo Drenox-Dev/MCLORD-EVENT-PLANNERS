@@ -1,0 +1,110 @@
+<!-- order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Booking - CoolBox</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Place Your Order</h1>
+
+  <form onsubmit="sendWhatsApp(event)">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="location">Venue Location:</label>
+    <input type="text" id="location" required>
+
+    <label for="date">Date of Event:</label>
+    <input type="date" id="date" required>
+
+    <label for="message">Additional Info:</label>
+    <textarea id="message" rows="4" placeholder="What you want to order..."></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+    <a href="index.html" class="back-link">← Back to Pricing</a>
+</div>
+
+<section class="theh1"><h1>INFORMATION</h1></section>
+<section class="main">
+<section class="first">
+  <h1>CONTACT DETAILS</h1>
+  <p>We'd love to hear from you! Mclord Event Planners<br>
+  We are commited to providing exceptional services and support.<br>
+Whether you have questions about our services or assistance<br></p>
+  </section>
+  <section>
+    <h1>ADDRESS</h1>
+    <p>18 Location Road Elelenwo
+    PortHarcourt, Rivers State, Nigeria</p>
+  </section>
+  <section><h1>EMAIL ADDRESS</h1>
+  <p><a href="https://wa.me/2347037238611">08037238611j@gmail.com</p></a></section>
+
+  <section><H1>PHONE NUMBER</H1>
+  <p>08037238611,
+  08037314347</p></section>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-contact">
+    <a href="https://wa.me/2347037238611" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> Instagram
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"> Facebook
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> Telegram
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="Twitter/X"> X (Twitter)
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"> YouTube
+    </a>
+  </div>
+
+  <div class="footer-text">
+    &copy; 2025 <strong>MCLORD C Drinks</strong>. All rights reserved.<br>
+    Powered by <span>MCLORD EVENT PLANNERS</span> • Designed with ❤️ in Nigeria
+  </div>
+</footer>
+<script>
+  function sendWhatsApp(event) {
+    event.preventDefault(); // prevent real form submission
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const location = document.getElementById("location").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
+
+    const yourNumber = "2348037238611"; // Nigerian number (no +), example: 2348123456789
+
+    const text = `📦 *MCLORD ORDER DETAILS*
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Venue: ${location}
+📅 Date: ${date}
+📝 Message: ${message || "N/A"}`;
+
+    const whatsappURL = `https://wa.me/${yourNumber}?text=${encodeURI(text)}`;
+
+    window.open(whatsappURL, "_blank"); // open WhatsApp chat in new tab
+  }
+  form.reset();
+</script>
+
+</body>
+</html>
