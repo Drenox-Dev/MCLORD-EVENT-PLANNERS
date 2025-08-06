@@ -177,6 +177,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
+  font: bold;
   z-index: 10;
   text-align: center;
 }
@@ -238,7 +239,7 @@ body {
 }
 
 
-.offer2,.offer1{
+.offer1{
   background-color: white;
   border-radius: 10px;
   /* padding: 20px; */
@@ -248,6 +249,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .offer1:hover {
   margin-top: 10px;
@@ -298,7 +300,13 @@ body {
     /* width: 100%; */
     align-items: center;
     margin-top: -40px;
-    position: relative;
+    position: relative;           /* ✅ Stretches to full container */
+  /* padding: 10px; */
+  margin-bottom: 10px;
+  box-sizing: border-box;       /* ✅ Keeps padding inside the width */
+  font-size: 1rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 6px;
 }
 .text h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -322,6 +330,7 @@ body {
 .book-section button:hover{
   transform: scale(0.9);
 }
+
 .our-counter{
   text-align: center;
     justify-content: space-between;
@@ -594,9 +603,10 @@ button.next { right: 0; }
   cursor: pointer;
   box-shadow: #111;
 }
-.price img:hover{
-  transform: matrix(30px);
+.price img {
+  transition: transform 0.3s ease-in-out;
 }
+
 .price button{
   text-align: center;
   color: white;
@@ -698,7 +708,7 @@ button.next { right: 0; }
 
 /* =====================RESPONSIVE NESS=============== */
 /* ===== Responsive Media Queries ===== */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .nav-bar{
     padding: 10px 15px;
   }
@@ -794,4 +804,146 @@ button.next { right: 0; }
   #about-div{
     box-shadow: 3px 6px 10px grey;
   }
+  .offer1:nth-child(1){
+  margin-top: 5px;
+  /* color: blue; */
+}
+}
+@media screen and (max-width: 480px) {
+  .nav-bar{
+    padding: 10px 15px;
+  }
+  .nav-link{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #222;
+    height: 100vh;
+    width: 200px;
+    padding-top: 20px;
+  }
+  .nav-link a{
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+  }
+  .nav-link button{
+    /* padding: 15px 20px; */
+    color: red;
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .nav-link.show{
+    display: flex;
+  }
+  .menu-icon{
+    display: block;
+  }
+  header{
+    height: 200px;
+  }
+  .book-section{
+    display: block;
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+  .offer-section{
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .offer1,.offer2{
+    /* width: 350px; */
+    width: 90%;
+    /* padding: 0; */
+    overflow: none;
+    align-items: center;
+    text-align: center;
+    margin-left: 15px;
+    /* margin-right: 20px; */
+  }
+  .main-price{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .price{
+    margin-top: 30px;
+    width: 120%;
+    margin-left: -6px;
+  }
+  .counter{
+    font-size: 2rem;
+    /* width: 200%; */
+    /* position: relative; */
+    height: 20px;
+    margin-left: -5px;
+    /* padding: 0.3rem 1rem; */
+  }
+.main-counter{
+  /* width: 100%; */
+  /* padding: 10px; */
+}
+    .counter1{
+    font-size: 2rem;
+  }
+    .counter2{
+    font-size: 2rem;
+    margin-right: 40px;
+    /* padding: 1rem; */
+  }
+  .our-counter h1{
+    text-align: center;
+    font-size: 10px;
+  }
+  .our-counter{
+    /* gap: 2rem; */
+    justify-content: space-between;
+    gap: 2rem;
+    /* position: sticky; */
+    padding: 20px 15px;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: -2px;
+    /* margin-left: -5px; */
+    /* position: anchor; */
+    /* width: 200px; */
+  }
+  #about-div{
+    box-shadow: 3px 6px 10px grey;
+  }
+  #orderForm input{
+    padding: 0;
+    padding: 10px 10px;
+    /* width: 300%; */
+    display: block;
+    /* overflow-x: visible; */
+    top: 10%;
+    /* margin-left: 20px; */
+    /* margin-right: 40px; */
+    width: 74%;
+box-sizing: border-box;
+margin-left: 40px;
+margin-top: 20px;
+  }
+  .book-section{
+    /* overflow: visible; */
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .text{
+    font: bold;
+  }
+  .offer1:nth-child(1){
+  margin-top: 5px;
+  /* color: blue; */
+}
+
 }
