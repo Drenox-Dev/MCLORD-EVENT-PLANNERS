@@ -920,6 +920,9 @@ button.next { right: 0; }
     /* position: anchor; */
     /* width: 200px; */
   }
+  .logo img{
+    height: 60px;
+  }
   #about-div{
     box-shadow: 3px 6px 10px grey;
   }
