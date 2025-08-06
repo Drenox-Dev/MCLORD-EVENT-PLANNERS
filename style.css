@@ -867,8 +867,11 @@ button.next { right: 0; }
     overflow: none;
     align-items: center;
     text-align: center;
-    margin-left: 15px;
+    margin-left: 20px;
     /* margin-right: 20px; */
+  }
+  #our-services{
+    margin-top: 30px;
   }
   .main-price{
     text-align: center;
