@@ -256,9 +256,9 @@ body {
   box-shadow: 3px 3px 10px black;
   /* border: 3px solid black; */
   border-radius: 20px;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.2s  ease;
-  position: relative;
+  /* position: relative; */
 }
 .offer2:hover {
   margin-top: 10px;
@@ -603,6 +603,7 @@ button.next { right: 0; }
 }
 offer1 button:hover{
   transform: translate(1.2px, 1.2px);
+  /* margin-top: 10px; */
 }
 #modalForm{
   top: -50%;
