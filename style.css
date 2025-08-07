@@ -604,7 +604,10 @@ button.next { right: 0; }
 offer1 button:hover{
   transform: translate(1.2px, 1.2px);
 }
-
+#modalForm{
+  top: -50%;
+  margin-top: 40px;
+}
 /* animation to scroll all reviews left */
 @keyframes slide-left {
   0% { transform: translateX(0); }
