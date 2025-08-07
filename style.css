@@ -823,7 +823,7 @@ offer1 button:hover{
 
 /* =====================RESPONSIVE NESS=============== */
 /* ===== Responsive Media Queries ===== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .nav-bar{
     padding: 10px 15px;
   }
