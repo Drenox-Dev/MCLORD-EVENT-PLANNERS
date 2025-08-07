@@ -30,7 +30,7 @@
   <header id="hero">
     <div class="text">
       <h1>Mclord Event services <br></h1>
-      <button class="main-btn" type="submit"><a href="about.html">Order Here</a></button>
+      <!-- <button class="main-btn" type="submit"><a href="about.html">Order Here</a></button> -->
     </div>
 
     <div class="slide fade">
@@ -61,19 +61,50 @@
   </section>
 
   <section class="offer-section" data-aos="fade-up">
-    <div class="offer1">
-      <h1>Events Planners</h1>
-      <p>We have one of the best <br> cooling systems there is</p>
-    </div>
-    <div class="offer1">
-      <h1>Cold drinks delivery</h1>
-      <p>Mobile cooling van <br> Delivered to your venues</p>
-    </div>
-    <div class="offer1">
-      <h1>Event Cooling Support</h1>
-      <p>We innovate to help you have <br> the best events of your life</p>
-    </div>
-  </section>
+  <!-- SERVICE 1 -->
+  <div class="offer1">
+    <h1>PLAN EVENT</h1>
+    <p>Reliable plant and equipment <br> for your events</p>  
+<button onclick="toggleOptions('WE OFFER PROFESSIONAL SERVICES', ['Event Model','Planning','Security','MC/Host','Decoration','Event Centers','Budgeting/costing','Logistics','Cakes'])">Offer</button>
+</div>
+
+  <!-- SERVICE 2 -->
+  <div class="offer1">
+    <h1>COOLING/CHILLING SERVICES</h1>
+    <p>Keep your drinks and event <br> area cold and refreshing</p>
+<button onclick="toggleOptions('We Offer Strictly Specifical', ['Ice Cubes','Cold Box','Ice Blocks','Cold Van Delivery[Small, Meduim, Large]',])">Offer</button>
+  </div>
+
+  <!-- SERVICE 3 -->
+  <div class="offer1">
+    <h1>EVENT FACILITIES</h1>
+    <p>Complete event support with <br> tents, chairs, and more</p>
+    <button onclick="toggleOptions('WE ARRANGE INVENT CENTERS/HALL', ['Cannopies','Plastic Chairs','Chairvaries Chairs','Tents(open/close)','Fans/A/c','Cannopies','Rugs/Carpets','VIP Setup','Lightens','Banquet Tables'])">Offer</button>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="offerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Offer</h2>
+    <form id="modalForm">
+      <div id="modalOptions"></div>
+      <button type="button" class="submit-offer" onclick="submitOffer()">Order</button>
+    </form>
+  </div>
+</div>
+<div id="offerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Select Services</h2>
+    <form id="modalOptions"></form>
+    <button onclick="submitOffer()" class="submit-btn">Send Order via WhatsApp</button>
+  </div>
+</div>
+
+
+
 
   <section class="ourpricing"  data-aos="fade-up">
     <h2>OUR PRICING</h2>

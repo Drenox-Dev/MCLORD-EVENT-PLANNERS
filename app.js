@@ -105,3 +105,56 @@ window.open(url, "blank");
 form.reset()
   })
 })
+  let currentCategory = '';
+let currentOptions = [];
+
+function toggleOptions(category, options) {
+  currentCategory = category;
+  currentOptions = options;
+
+  const modal = document.getElementById("offerModal");
+  const modalOptions = document.getElementById("modalOptions");
+  const modalTitle = document.getElementById("modalTitle");
+
+  // Set modal title
+  modalTitle.textContent = `${category}`;
+
+  // Clear previous options
+  modalOptions.innerHTML = '';
+
+  // Add new options dynamically
+  options.forEach(option => {
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${option}"> ${option}`;
+    modalOptions.appendChild(label);
+  });
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("offerModal").style.display = "none";
+}
+
+function submitOffer() {
+  const selected = [...document.querySelectorAll('#modalOptions input:checked')].map(c => c.value);
+  if (selected.length === 0) {
+    alert("Please select at least one option.");
+    return;
+  }
+
+  const message = `📦 *MCLORD Cooling Van Offer* 📦\n\n🗂 Category: *${currentCategory.toUpperCase()}*\n✅ Services:\n${selected.map(s => `- ${s}`).join('\n')}\n\n📲 From your website`;
+  const phoneNumber = "2347037238611"; // 🟢 Replace this with your actual WhatsApp number
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, '_blank');
+  closeModal();
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("offerModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
