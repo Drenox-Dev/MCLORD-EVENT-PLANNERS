@@ -144,7 +144,7 @@ function submitOffer() {
   }
 
   const message = `📦 *MCLORD Cooling Van Offer* 📦\n\n🗂 Category: *${currentCategory.toUpperCase()}*\n✅ Services:\n${selected.map(s => `- ${s}`).join('\n')}\n\n📲 From your website`;
-  const phoneNumber = "2347037238611"; // 🟢 Replace this with your actual WhatsApp number
+  const phoneNumber = "2348037238611"; // 🟢 Replace this with your actual WhatsApp number
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappURL, '_blank');
