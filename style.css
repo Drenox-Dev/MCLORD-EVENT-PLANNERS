@@ -1014,19 +1014,29 @@ offer1 button:hover{
   }
   .book-section{
     /* padding: 4rem; */
-    height: 190px;
+    height: 170px;
     z-index: 10;
     background-color: whitesmoke;
   }
+
   .fade-text-container{
     position: relative;
     z-index: 20;
+    height: 100px;
+    margin-top: -0.2px;
     padding: 1rem;
+  }
+  .book-section h1{
+    margin-bottom: 10px;
   }
   .offer-section{
     text-align: center;
     display: block;
     flex-direction: column;
+  }
+  .slide:nth-of-type(3){
+    width: 0;
+    height: 100vh;
   }
   .offer1,.offer2{
     /* width: 350px; */
