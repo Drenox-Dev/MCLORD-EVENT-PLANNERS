@@ -1038,6 +1038,10 @@ offer1 button:hover{
     width: 0;
     height: 100vh;
   }
+  .text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+  }
   .offer1,.offer2{
     /* width: 350px; */
     width: 100%;
