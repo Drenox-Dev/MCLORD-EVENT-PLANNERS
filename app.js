@@ -158,3 +158,17 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+function toggleButtons() {
+  document.getElementById('fab').classList.toggle('show');
+}
+let currentIndex = 0;
+const slideTrack = document.getElementById('carouselTrack');
+const totalSlides = slideTrack.children.length;
+
+function moveSlide(direction) {
+  currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+  slideTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Optional: Auto-slide
+// setInterval(() => moveSlide(1), 5000);
