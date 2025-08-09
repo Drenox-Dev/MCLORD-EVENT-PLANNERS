@@ -1039,6 +1039,8 @@ offer1 button:hover{
     height: 100vh;
   }
   .text{
+    /* padding: auto; */
+    font-weight: 300;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
   }
